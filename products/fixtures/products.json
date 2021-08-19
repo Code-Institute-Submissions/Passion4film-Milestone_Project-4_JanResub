@@ -1,0 +1,38 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001340155",
+        "name": "Arizona Original Bootcut Jeans",
+        "description": "Bootcut jeans in our just-right original fit are comfortable and look great too.  5-pocket style sits below waist straight fit through seat and thigh bootcut leg 18\" leg opening cotton washable imported extended sizes and washes available online only",
+        "price": 53.99,
+        "category": 6,
+        "image": "DP0709201205510679M.jpg"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001600425",
+        "name": "Liz Claiborne Audra Classic Fit Straight Leg Pants",
+        "description": "Straight-leg styling and on-the-job comfort make our Audra pants a flattering business decision. flat front zip fly with hook-and-bar closure 2 front and 2 back welt pockets 34 1/2\" inseam polyester/rayon/spandex washable imported",
+        "price": 58.99,
+        "category": 4,
+        "image": "DP0113201617034987M.jpg"
+      }
+    },
+    {
+        "pk": 174,
+        "model": "products.product",
+        "fields": {
+          "sku": "pp5007320233",
+          "name": "St. John's Bay Ikat Sharkbite Tank Top",
+          "description": "Add our tank top to your warm-weather wardrobe, featuring a sharkbite hem and a flowy style that looks great with shorts or skinny jeans. roundneck sharkbite hem rayon washable imported petite: 30\" length misses: 32\" length",
+          "price": 36.99,
+          "category": 8,
+          "image": "DP0429201617074742M.jpg"
+        }
+      }
+    ]
