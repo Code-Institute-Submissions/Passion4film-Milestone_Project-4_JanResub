@@ -33,17 +33,30 @@ body {
     min-width: 260px;
 }
 
-.btn-black {
-    background: black;
+.btn-blue {
+    background: rgb(9, 92, 139);
     color: white;
+}
+
+.btn-outline-colour {
+    background: white;
+    color: rgb(9, 92, 139) !important; /* use important to override link colors for <a> elements */
+    border: 1px solid rgb(9, 92, 139);
+}
+
+.btn-outline-colour:hover,
+.btn-outline-colour:active,
+.btn-outline-colour:focus {
+    background: rgb(164, 213, 233);
+    color: white !important;
 }
 
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
+.btn-blue:hover,
+.btn-blue:active,
+.btn-blue:focus {
     background: rgb(48, 148, 187);
     color: white;
 }
