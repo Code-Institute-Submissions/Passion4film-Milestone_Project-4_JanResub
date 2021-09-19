@@ -61,12 +61,12 @@ body {
     color: white;
 }
 
-.text-black {
-    color: #000 !important;
+.text-blue {
+    color: rgb(9, 92, 139) !important;
 }
 
-.border-black {
-    border: 1px solid black !important;
+.border-blue {
+    border: 1px solid rgb(9, 92, 139) !important;
 }
 
 .bg-pink {
@@ -276,7 +276,7 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        padding-top: 200px;
+        padding-top: 250px;
     }
 }
 
