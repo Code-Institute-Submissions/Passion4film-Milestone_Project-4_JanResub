@@ -1,1 +1,1 @@
-web: gunicorn passion_4_painting.wsgi.application
+web: gunicorn passion_4_painting.wsgi:application
