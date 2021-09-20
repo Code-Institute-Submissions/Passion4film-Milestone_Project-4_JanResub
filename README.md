@@ -1,104 +1,239 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center"><img src="media/p4plogo.png" style="margin: 0;" alt="image of site logo"></h1>
 
-Welcome Passion4film,
+[View the live website here.](https://passion-4-painting.herokuapp.com/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
+## Table of Contents
 
-## Gitpod Reminders
+# Passion 4 Painting Overview
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Things to consider
 
-`python3 -m http.server`
+1. Goods to sell that can be grouped into categories
+2. Using Django as a framework.
+3. The C.R.U.D functionality - site owners must be able to add, read, update and delete the products on the store.
+4. A search function to locate products by name/ category or description .
+5. The site must be user friendly and visually appealing.
+6. A user can register on the site but does not have to in order to make a purchase.
 
-A blue button should appear to click: _Make Public_,
+# UX
 
-Another blue button should appear to click: _Open Browser_.
+## User stories
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+## Wireframes page designs
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+## Features
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+-   Responsive on all device sizes. For example:
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
+## Error Handling
 
-## Release History
+I created custom error pages so that if the user encounters a page that doesn't exist/deleted/forbidden etc, the stlye of the error page will match the rest of the site. This makes the site more professional.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- 404 Not Found
+- 403 Forbidden
+- 410 Gone
+- 500 Internal Server Error
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+I reviewed the documentation on [] in order to achieve this.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+404 error page example
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## Technologies Used
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Languages Used
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+In this project I used:
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [JQuery](https://jquery.com/) 
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+-   [Django](https://www.djangoproject.com/) 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Frameworks, Libraries & Programs Used
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+-   
+-   [Heroku](https://www.heroku.com/home) Heroku is where the site is deployed.
+-   [Google Fonts:](https://fonts.google.com/) Google fonts were used to import the 'Satisfy' font into the style.css file which is used on all pages throughout the project.
+-   [Font Awesome:](https://fontawesome.com/) Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+-   [GitHub:](https://github.com/) GitHub is used to store the projects code after being pushed from Git.
+-   [Git:](https://git-scm.com/) Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+-   [Responsinator:](http://www.responsinator.com/) Responsinator was used to check the site was responsive across all devices.
+-   [Am I Responsive](http://ami.responsivedesign.is/) Am I Responsive was used to demonstrate the site was responsive in the attached screenshots.
+-   [Balsamiq:](https://balsamiq.com/) Balsamiq was used to create the wireframes during the design process.
+-   [Lighthouse](https://developers.google.com/web/tools/lighthouse)
+-   Chrome, Microsoft Edge & Firefox internet browsers.
+-   Adobe Photoshop.
+-   I also made use of Bootstrap 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Testing
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Manual Testing documentation
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Validators
 
-------
+I used the following services to validate every page of the project to ensure there were no syntax errors:
 
-## FAQ about the uptime script
+-   [W3C Markup Validator](https://validator.w3.org/) This validator doesnt like the Jinja templating - but if you run the code from the page source you can check for any non-jinja errors.
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+-   [JSHint](https://jshint.com/)
+-   [PEP8 Online Check](http://pep8online.com/)
 
-**Why have you added this script?**
+<img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Testing User Stories
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Further Testing
 
-**So….?**
+-   The Website was tested on Google Chrome, Microsoft Edge and FireFox browsers to check it loaded correctly.
+-   The website was viewed on a variety of devices such as Desktop, Laptop and a variety of iPhones & Android phones to check it loaded correctly.
+-   The website was tested on Responsinator to ensure responsiveness on all devices.
+-   A large amount of testing was done to ensure that all pages were linking correctly. This was done by frequently moving from one page by clicking the button links for 
+all pages on all devices.
+-   A large amount of testing of the database C.R.U.D functions was completed during development. After every change the site was tested to ensure no new issues or bugs were located.
+-   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues, they reported a success on all fronts.
+-   The website was tested on [Lighthouse](https://developers.google.com/web/tools/lighthouse) and achieved a high score on all issues:
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+    
+    You can use the Lighthouse Tool on any webpage by right clicking on the site, then 'inspect', then the two arrow button '>>' and 'Lighthouse'. You can select to test the site 
+    as a desktop version or mobile version and then click the blue 'Generate Report' which will provide you with the results in the screenshot provided above.
 
-**Can I opt out?**
+## Known Bugs
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+No bugs have been located at the time of Deployment.
+
+## Deployment
+
+### GitHub Pages
+
+The repository for this project is stored on [GitHub](https://github.com/) and is deployed on [Heroku](https://www.heroku.com/).
+
+In order to add to this project you will need:
+
+- Python 3.8.3 or higher
+- Git version control
+- Code editor
+- GitHub account
+- MongoDB account
+
+### Forking the GitHub Repository
+
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Passion4film/Milestone-Project-3)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Passion4film/Milestone-Project-3)
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+$ git clone https://github.com/Passion4film/Milestone-Project-3
 ```
 
-**Anything more?**
+7. Press Enter. Your local clone will be created.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+```
+$ git clone https://github.com/Passion4film/Milestone-Project-3
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
 
----
+Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
-Happy coding!
+8. Create a file called env.py for the environment variables, containing:
+
+```console
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "<app secret key>")
+os.environ.setdefault("MONGO_URI", "mongodb+srv://<username>:<password>@<cluster_name>-ofgqg.mongodb.net/<database_name>?retryWrites=true&w=majority")
+os.environ.setdefault("MONGO_DBNAME", "<database name>")
+
+```
+9. **Ensure that env.py is listed in your .gitignore file so that the environment variables are are never made public**
+10. The app can now be run locally using
+```console
+python3 app.py
+```
+
+## Deployment to Heroku 
+
+If you have a Heroku account login [here](https://id.heroku.com/login) or create an account.
+
+Before creating a Heroku application there are some files that need to be created to run the app:
+
+* requirements.txt file (which lists the dependencies that are needed for the app) 
+* Procfile (this is what Heroku looks for to know which file runs the app, and how to run it)
+
+```console
+pip3 freeze --local > requirements.txt
+echo web: python app.py > Procfile
+```
+
+At Heroku.com you can choose to 'Create a New App' - the name must be unique, in lowercase letters and use dashes instead of spaces.
+
+* Next, select the region closest (doesn't have to be exact - I chose Europe) to you then click 'Create App'.
+* For this project I chose to setup 'Automatic Deployment' from my GitHub repository. 
+* Make sure your GitHub profile is displayed, then add your repository name then click 'Search'. Once it finds your repo, click to connect to this app.
+* DON'T click to Enable Automatic Deployment yet, otherwise you'll get unwanted application errors.
+
+Since environment variables are within a hidden env.py file, Heroku won't be able to read those variables. Click on the 'Settings' tab for your app, and then click on 
+'Reveal Config Vars', where we can securely tell Heroku which variables are required. Must match the details in the env.py file you have to create in github.
+
+Make sure not to include any "quotes" for the key, or the value.
+
+
+* Make sure all changes on GitHub have been added, commited and pushed to GitHub. 
+* We can now safely 'Enable Automatic Deployment', as everything should be available on our repository.
+* Click 'Deploy Branch'. Heroku will now receive the code from GitHub, and start building the app using the required packages. 
+* When this is completed it will state: "Your app was successfully deployed." 
+* Click "View" to launch your new app.
+
+## Future maintainability
+
+
+## Credits
+
+### Content
+
+Online tutorials:
+
+* 
+
+
+### Media
+
+I created the logo, flavicon, error pages for the site using Adobe Photoshop.
+
+
+## Acknowledgements
+
+I received inspiration for this project from the Boutique Ado mini-project as part of the Code Institute course, example websites, Slack message boards as well as 
+much appreciated help from my Mentor; Antonio Rodriguez.
+
+**DISCLAIMER: This project is for educational purposes only, no materials/files are intended for any commercial use**
+
+[Contents](#Table-of-Contents)

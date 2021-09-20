@@ -1,7 +1,5 @@
 Hello {{ order.full_name }}!
 
-<center><a href="https://passion-4-painting.herokuapp.com/"><img src="https://passion-4-painting.s3.eu-west-2.amazonaws.com/media/logo-sm.jpg" alt="passion 4 painting logo" style="display:block;"></a></center>
-
 Thank you for placing your order with Passion 4 Painting. We are happy to confirm your order information below:
 
 Order Number: {{ order.order_number }}
