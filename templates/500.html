@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- 404 error page -->
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <hr>
+                <h2 class="logo-font mb-4">Oops! Something went wrong!</h2>
+                <h5 class="text-muted">Sorry, there has been an internal server error.</h5>
+                <img class="responsive-img center-align" src="https://passion-4-painting.s3.eu-west-2.amazonaws.com/media/500_error.png" 
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="text-right">
+                    <a class="btn btn-outline-colour rounded-5" href="{% url 'products' %}">Return To Shop</a>
+                </div>
+            </div>            
+        </div>
+    </div>
+{% endblock %}
