@@ -1,11 +1,12 @@
 <script type="text/javascript">
 
     // Disable +/- buttons outside 1-99 range
-    function handleEnableDisable(itemId) {
-        var currentValue = parseInt($(`#id_qty_${itemId}`).val());
+    function handleEnableDisable(itemId, currentValue) {
+        //var currentValue = parseInt($(`#id_qty_${itemId}`).val());
         var minusDisabled = currentValue < 2;
         var plusDisabled = currentValue > 98;
-        $(`.decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+        console.log('current value', currentValue)
+        $(`.decrement-qty`).prop('disabled', minusDisabled);
         $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
     }
 
@@ -13,7 +14,7 @@
     var allQtyInputs = $('.qty_input');
     for(var i = 0; i < allQtyInputs.length; i++){
         var itemId = $(allQtyInputs[i]).data('item_id');
-        handleEnableDisable(itemId);
+        handleEnableDisable(itemId, 1);
     }
 
     // Check enable/disable every time the input is changed
@@ -29,7 +30,8 @@
        var currentValue = parseInt($(closestInput).val());
        $(closestInput).val(currentValue + 1);
        var itemId = $(this).data('item_id');
-       handleEnableDisable(itemId);
+       currentValue = $(closestInput).val()
+       handleEnableDisable(itemId, currentValue);
     });
 
     // Decrement quantity
@@ -39,6 +41,7 @@
        var currentValue = parseInt($(closestInput).val());
        $(closestInput).val(currentValue - 1);
        var itemId = $(this).data('item_id');
-       handleEnableDisable(itemId);
+       currentValue = $(closestInput).val()
+       handleEnableDisable(itemId, currentValue);
     });
 </script>
