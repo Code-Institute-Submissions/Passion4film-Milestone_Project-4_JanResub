@@ -317,6 +317,12 @@ input[name='q']::placeholder {
         font-size: .83rem;
     }
 
+    .btn.btn-outline-colour.rounded-5.btn-lg,
+    .btn.btn-blue.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
     }
