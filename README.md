@@ -1,4 +1,4 @@
-<h1 align="center"><img src="media/p4plogo.png" style="margin: 0;" alt="image of site logo"></h1>
+<h1 align="center"><img src="https://passion-4-painting.s3.eu-west-2.amazonaws.com/media/logo-m.png" style="margin: 0;" alt="image of site logo"></h1>
 
 [View the live website here.](https://passion-4-painting.herokuapp.com/)
 
@@ -23,6 +23,25 @@
 
 ## Wireframes page designs
 
+**Home page:**
+
+<img src="media/wireframes/home_page.png" style="margin: 0;">
+
+**Products page:**
+
+<img src="media/wireframes/products_page.png" style="margin: 0;">
+
+**Product details page:**
+
+<img src="media/wireframes/product_details_page.png" style="margin: 0;">
+
+**Shopping bag page:**
+
+<img src="media/wireframes/shopping_bag_page.png" style="margin: 0;">
+
+**Checkout page:**
+
+<img src="media/wireframes/checkout_page.png" style="margin: 0;">
 
 ## Features
 
@@ -37,8 +56,6 @@ I created custom error pages so that if the user encounters a page that doesn't 
 - 403 Forbidden
 - 410 Gone
 - 500 Internal Server Error
-
-I reviewed the documentation on [] in order to achieve this.
 
 404 error page example
 
@@ -57,7 +74,7 @@ In this project I used:
 
 ### Frameworks, Libraries & Programs Used
 
--   
+-   [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/) I used Bootstrap's framework for the styling and for responsivness on mobiles.
 -   [Heroku](https://www.heroku.com/home) Heroku is where the site is deployed.
 -   [Google Fonts:](https://fonts.google.com/) Google fonts were used to import the 'Satisfy' font into the style.css file which is used on all pages throughout the project.
 -   [Font Awesome:](https://fontawesome.com/) Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
@@ -69,7 +86,6 @@ In this project I used:
 -   [Lighthouse](https://developers.google.com/web/tools/lighthouse)
 -   Chrome, Microsoft Edge & Firefox internet browsers.
 -   Adobe Photoshop.
--   I also made use of Bootstrap 
 
 ## Testing
 
@@ -221,13 +237,24 @@ Make sure not to include any "quotes" for the key, or the value.
 
 Online tutorials:
 
-* 
+* [For the content of the Health and Wellbeing page](https://ledgebay.com/benefits-of-paint-by-numbers/)
+
+* [For the deletion confirmation model - for site admin only](https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=delete-confirmation-modal)
+
+* [For the image carousel on product details page - to show a pic of the kit that comes with the painting](https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-carousel.php)
 
 
 ### Media
 
 I created the logo, flavicon, error pages for the site using Adobe Photoshop.
 
+[The logo base image](https://i.pinimg.com/originals/ca/20/d8/ca20d859c1ff063d9482a56d9be19574.jpg)
+
+[The painting kit image](https://images.squarespace-cdn.com/content/v1/5ad8947d2714e5edb7bde89d/1592030962065-YG0VE9TB0QBLQPY8CRI4/DSC_7463.jpg?format=1000w)
+
+[The featured image on the home page](https://www.stylist.co.uk/images/app/uploads/2021/01/26123624/paint-by-numbers-for-adults-crop-1611664653-1920x1006.jpg?w=1680&h=880&fit=max&auto=format%2Ccompress)
+
+All the paintings 'on sale' are photos of my own paintings I have completed myself, from my home. I took all the photographs and edited/uploaded them accordingly.
 
 ## Acknowledgements
 
