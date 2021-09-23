@@ -1,6 +1,11 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item d-block d-md-none">
+            <h5 class="logo-font font-weight-bold nav-link text-blue mr-5" >
+                Passion 4 Painting
+            </h5>
+        </li>
+        <li class="nav-item d-block d-md-none">
             <a class="logo-font font-weight-bold nav-link text-blue mr-5" href="{% url 'home' %}" id="home-link">
                 Home
             </a>
@@ -42,7 +47,7 @@
                 <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
                 <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
                 <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
-                <a href="" class="dropdown-item">Health and Wellbeing Benefits</a>
+                <a href="{% url 'health_benefits' %}" class="dropdown-item">Health and Wellbeing Benefits</a>
             </div>
         </li>
     </ul>

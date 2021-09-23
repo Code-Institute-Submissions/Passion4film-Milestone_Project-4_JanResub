@@ -21,6 +21,7 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+    position: relative;
 }
 
 .main-logo-link {
@@ -31,6 +32,7 @@ body {
     background: rgb(9, 92, 139);
     color: white;
     min-width: 260px;
+    position: fixed;
 }
 
 .btn-blue {
