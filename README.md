@@ -4,6 +4,30 @@
 
 ## Table of Contents
 
+- [Overview](#BitterSweet-Overview)
+- [Things to consider](#Things-to-consider)
+- [UX](#UX)  
+    - [User Stories](#User-stories)
+    - [Design](#Design)
+    - [Wireframes](#Wireframes-page-designs)
+    - [MongoDB](#MongoDB-data-schema-design)
+- [Features](#Features)
+- [Future Features](#Future-Features)
+- [Error Handling](#Error-Handling)
+- [Technologies Used](#Technologies-Used)
+    - [Languages](#Languages-Used)
+    - [Frameworks](#Frameworks,Libraries-&-Programs-Used)
+- [Testing](#Testing)
+    - [Testing User Stories](#Testing-User-Stories)
+    - [Further Testing](#Further-Testing)
+    - [Bugs](#Known-Bugs)
+- [Deployment](#Deployment)
+- [Future Maintainability](#Future-maintainability)
+- [Credits](#Credits)
+    - [Content](#Content)
+    - [Media](#Media)
+- [Acknowledgements](#Acknowledgements)
+
 # Passion 4 Painting Overview
 
 ## Things to consider
@@ -91,6 +115,7 @@ In this project I used:
 
 ### Manual Testing documentation
 
+[Please see the testing file](testing.md)
 
 ### Validators
 

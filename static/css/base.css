@@ -176,6 +176,11 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+/*------------------------------------------------Footer links */
+.footer-icon {
+    font-size: 30px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
