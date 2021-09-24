@@ -10,7 +10,7 @@
     - [User Stories](#User-stories)
     - [Design](#Design)
     - [Wireframes](#Wireframes-page-designs)
-    - [MongoDB](#MongoDB-data-schema-design)
+    - [Database](#Database)
 - [Features](#Features)
 - [Future Features](#Future-Features)
 - [Error Handling](#Error-Handling)
@@ -43,6 +43,22 @@
 
 ## User stories
 
+|**As a/an**|**I want to be able to...**|**So that I can...**|
+|:-----|:-----|:-----|
+|Shopper|View a list of the products available to purchase on the site|See if there is anything I wish to purchase|
+|Shopper|View the details of each product available easily|See the price, product details and image clearly|
+|Shopper|See if there are any sales or discounts available easily|Save some money on my purchase by taking advantage of the sales etc|
+|Shopper|See the total of my basket at all times and be able to view the items in there also|Be aware of how much I might be spending if I were to purchase the items, and to review what I have selected to purchase|
+|Site User|Register for an account on the website if I choose and be able to login and out with ease|Store my personal info on the site to make future purchases faster|
+|Site User|Receive emails to confirm my registration|Know that my registration was successful|
+|Site User|See my order history on my user profile|View my order history and save my information|
+|Shopper|Search and sort the products into categories/price etc|See what is on offer and make an informed decision about what I want based on the product info, be able to search for a specific product.|
+|Shopper|Adjust the quantity of the items in the ‘basket’ or delete them entirely|Have control over the items I want to purchase and change my mind if necessary|
+|Shopper|Feel that the payment system of the site is secure and legit|Be happy to give the necessary information to proceed with the purchase|
+|Shopper|See my order confirmation when I have made my payment|Be sure I have entered the correct info and the products were also correct|
+|Shopper|Receive an email to confirm the details of my order with an estimated shipping time|Maintain records of my purchases and be informed of when the item may be received |
+|Store Owner|Add new products to store|Add new items to the store to be purchased at any time|
+|Store Owner|Edit/Update products or Delete them if needed|Change the products details including price, description or image. Or remove items that are sold out or no longer for sale.|
 
 
 ## Wireframes page designs
@@ -67,9 +83,23 @@
 
 <img src="media/wireframes/checkout_page.png" style="margin: 0;">
 
+## Database
+
+The database being used to store all products and customer information is built into Django and can be accessed by the site administrators by typing "/admin" at the end of the web address. Here are screenshots of what it looks like:
+
+<img src="https://res.cloudinary.com/passion4film/image/upload/v1632511162/Screenshots/database-1_bbliyw.png" style="margin: 0;">
+
+<img src="https://res.cloudinary.com/passion4film/image/upload/v1632511162/Screenshots/database-2_edcmfl.png" style="margin: 0;">
+
 ## Features
 
 -   Responsive on all device sizes. For example:
+
+<img src="https://res.cloudinary.com/passion4film/image/upload/v1632511255/Screenshots/home-page-responsive_lzq8gu.png" style="margin: 0;">
+
+<img src="https://res.cloudinary.com/passion4film/image/upload/v1632511255/Screenshots/products-page-responsive_ycwliq.png" style="margin: 0;">
+
+<img src="https://res.cloudinary.com/passion4film/image/upload/v1632511255/Screenshots/productdescription-page-responsive_kddxyg.png" style="margin: 0;">
 
 
 ## Error Handling
@@ -83,7 +113,7 @@ I created custom error pages so that if the user encounters a page that doesn't 
 
 404 error page example
 
-
+<img src="https://res.cloudinary.com/passion4film/image/upload/v1632511651/Screenshots/404-error_tgo9uk.png" style="margin: 0;">
 
 ## Technologies Used
 
@@ -145,6 +175,8 @@ all pages on all devices.
 -   A large amount of testing of the database C.R.U.D functions was completed during development. After every change the site was tested to ensure no new issues or bugs were located.
 -   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues, they reported a success on all fronts.
 -   The website was tested on [Lighthouse](https://developers.google.com/web/tools/lighthouse) and achieved a high score on all issues:
+
+ADD LIGHTHOUSE SCREENSHOT
 
     
     You can use the Lighthouse Tool on any webpage by right clicking on the site, then 'inspect', then the two arrow button '>>' and 'Lighthouse'. You can select to test the site 
