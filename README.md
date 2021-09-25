@@ -127,6 +127,9 @@
 ### Checkout Page
 -    This page has a form for the user to complete in order to purchase the product - it is clear and easy to use. There is also info on this page showing what is to be purchased and the full cost breakdown. Under the card number section there is text to warn the user that their card is to be charged with the grand total - so there can be no misunderstanding and the user is completely clear. There is a cancel or an order button - clicking on the order sends the webhook to stripe and the payment would be taken and the user re-directed to an order confirmation screen which clearly lays out the details of the purchase, which is also emailed to them for their convenience.
 
+### Health and Wellness Page
+-    I wanted to create a paint by numbers site that was slightly different from the others that I viewed in research for this project. I personally have been completing paint by numbers for many years because I know about the amazing stress relief and creative outlet that they can be, but with their popularity increasing during the pandemic and lockdown I wanted to add a section on my site to highlight the benefits of paint by numbers as a healthy past-time. I therefore added a health and wellness page which takes the user to a page that lists many of the most important benefits to painting as well as a brief explanation of each. I also included links to studies completed for further validation of the points and for the user's interest. As credited in this readme - I got the information for this section from [this website](https://ledgebay.com/benefits-of-paint-by-numbers/).
+
 ### Future Features
 
 -   I would have liked to include my site logo on all the confirmation emails sent to the users, both when they register for the site and when they make a successful purchase. I think this would have elevated the emails and made them appear alot more professional, however I didn't have time on this project to figure that out.
