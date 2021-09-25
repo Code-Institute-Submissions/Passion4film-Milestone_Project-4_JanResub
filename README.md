@@ -60,6 +60,17 @@
 |Store Owner|Add new products to store|Add new items to the store to be purchased at any time|
 |Store Owner|Edit/Update products or Delete them if needed|Change the products details including price, description or image. Or remove items that are sold out or no longer for sale.|
 
+-   ### Design
+    -   #### Colour Scheme
+        -   The main colours used are shades of pink and blue, as these complement each other nicely and go with the logo I created, with the some of the text being white, black or blue depending on the background colour and content. The site is supposed to seem colourful as it is about painting, which is a creative pastime, but still allow users to clearly read and navigate the site.
+    -   #### Typography
+        -   The Nunito font is used for the site as this is clear and easy to read. Sans Serif is the fallback font in case for any reason the font isn't being imported into the site correctly. The font colour throughout is dependent on the background and the type of content to make it stand-out and for ease of reading against the background.
+    -   #### Imagery
+        -   I created the site logo using Adobe Photoshop and a stock photo located online that I edited to suit my purpose. 
+        -   The photos used for the paintings are taken by me of paint by number canvases that I have completed myself over the years at my home.
+        -   I created a favicon icon for the browser tab - a smaller version of the logo image.
+
+        <img src="https://passion-4-painting.s3.eu-west-2.amazonaws.com/media/favicon-sm.png" style="margin: 0;">
 
 ## Wireframes page designs
 
@@ -83,9 +94,9 @@
 
 <img src="media/wireframes/checkout_page.png" style="margin: 0;">
 
-## Database
+-   ## Database
 
-The database being used to store all products and customer information is built into Django and can be accessed by the site administrators by typing "/admin" at the end of the web address. Here are screenshots of what it looks like:
+    -   The database being used to store all products and customer information is built into Django and can be accessed by the site administrators by typing "/admin" at the end of the web address. Here are screenshots of what it looks like:
 
 <img src="https://res.cloudinary.com/passion4film/image/upload/v1632511162/Screenshots/database-1_bbliyw.png" style="margin: 0;">
 
@@ -101,6 +112,26 @@ The database being used to store all products and customer information is built 
 
 <img src="https://res.cloudinary.com/passion4film/image/upload/v1632511255/Screenshots/productdescription-page-responsive_kddxyg.png" style="margin: 0;">
 
+### Home Page
+-    This is the landing page, the first page the users come to - it has a featured image that takes up most of the page with the nav bar that is present on all pages so the site is easy to navigate. The nav bar also contains the search function which the users can see and make use of at any time - it is hidden on mobile by the hamburger icon, but it is still accessible on every page. There is a simple text to state 'Paint by Numbers' and a large 'Shop Now' button to take the users straight into the site.
+
+### Products Page
+-    This page lays out the products for sale - in this instance the paint by number kits the users can purchase. They are displayed in a neat grid that is fully responsive to screen sizes. They contain the product image, name, price and category. Clicking on them will direct the user to the product details page. The user is able to sort the products by name, by price or by category - whichever they prefer.
+
+### Product Details Page
+-    This page shows a larger image of the product the user has chosen and a bit of a blurb about the product - I also added an image carousel to this page so the users can change the image to a picture of the 'kit' that comes with each painting - this matches the description. The users have the ability to choose a quantity and either add the item to their shopping bag or go back to the store.
+
+### Shopping Bag Page
+-    This page shows the user their shopping bag - if there is nothing there it informs them and gives them a link to go back to the store. If there are products in the bag it populates with the details of this - as well as giving the users the ability to update their quantity or to remove the item from their bag completely. if they have goods and want to purchase they have buttons at the bottom to either go to a secure checkout or to go back to the store.
+
+### Checkout Page
+-    This page has a form for the user to complete in order to purchase the product - it is clear and easy to use. There is also info on this page showing what is to be purchased and the full cost breakdown. Under the card number section there is text to warn the user that their card is to be charged with the grand total - so there can be no misunderstanding and the user is completely clear. There is a cancel or an order button - clicking on the order sends the webhook to stripe and the payment would be taken and the user re-directed to an order confirmation screen which clearly lays out the details of the purchase, which is also emailed to them for their convenience.
+
+### Future Features
+
+-   I would have liked to include my site logo on all the confirmation emails sent to the users, both when they register for the site and when they make a successful purchase. I think this would have elevated the emails and made them appear alot more professional, however I didn't have time on this project to figure that out.
+-   I would have also liked to add additional photos of each painting, such as a photo of it on a wall, that the would be triggered by the mouse hovering over the image. However this would have required alot more photos being taken and I didn't have the time to persue this.
+-   If this was a real site I would look to include an option for the user to checkout and pay using Paypal - as this is personally my favourite way to purchse items online, it is faster, more secure and Paypal provides a level of protection for both sellers and shoppers. In my opinion a good ecommerce site utilises Paypal, so I would add this in a real store.
 
 ## Error Handling
 
@@ -129,8 +160,10 @@ In this project I used:
 ### Frameworks, Libraries & Programs Used
 
 -   [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/) I used Bootstrap's framework for the styling and for responsivness on mobiles.
+-   [AWS](https://aws.amazon.com/?nc2=h_lg) I used AWS S3 to store and display my product images.
+-   [Stripe](https://stripe.com/en-gb) Stripe payments are how the orders are taken and webhooks sent/received to take the payment and create the order on the datatbase.
 -   [Heroku](https://www.heroku.com/home) Heroku is where the site is deployed.
--   [Google Fonts:](https://fonts.google.com/) Google fonts were used to import the 'Satisfy' font into the style.css file which is used on all pages throughout the project.
+-   [Google Fonts:](https://fonts.google.com/) Google fonts were used to import the 'Nunito' font into the base.css file which is used on all pages throughout the project.
 -   [Font Awesome:](https://fontawesome.com/) Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 -   [GitHub:](https://github.com/) GitHub is used to store the projects code after being pushed from Git.
 -   [Git:](https://git-scm.com/) Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
@@ -161,9 +194,24 @@ I used the following services to validate every page of the project to ensure th
         alt="Valid CSS!" />
 
 
-
 ### Testing User Stories
 
+- #### Site user goals
+    1. As a shopper, I want to be able to see the products clearly for sale, view the details, see if any discounts/deals and see my basket total at all times.
+        - The products page aloows the user to see the products for sale and they can click on any of the products to get more info on the product as well as the option to add it to their basket. The nav bar on all pages allows the user to search or view the different categories or deals - and their basket is always visible with the amount of goods if any added showing at all times .
+
+    2. As a site user, I want to register for an account if I choose to, receive confirmation emails for registration and see my order history on my user profile ()if I have one).
+        -  The site makes use of Django to create an easy registration and signin/logout functions. To sign up for the site the user must confirm their email address and their profile page is where they can update their details or see any past orders if required.
+
+    3. As a shopper, I want to adjust the quantity of items in my shopping bag or delete them if I change my mind, trust the checkout system, see an order confirmation after a purchase and recieve an email to confirm.
+        - The shopping bag page allows the users to adjust the quanity of any of their items added to the bag or to delete them. the checkout system is using Stripe so it is secure and straight forward. The checkout page redirects to an order confirmation page so the user can be sure of their order and an automated email confirmation is also sent to the address they provided when completing the checkout page. A user is not required to register in order to make a purchase.
+
+- #### Site owner goals
+    1. As a site owner, I want to add new products to the store whenever I need to. 
+        -  If the user is a superuser (so store owner or admin) they have the additional option under My Account to click on Product management. This easy to use form can add any product to the store - if they wish to upload an image they have that option, or a default no-image photo is selected instead.
+
+    2. As a site owner, I want to Edit/Update products or Delete them if needed.
+        -  If the user is a superuser (so store owner or admin) they have the additional option on the products page and products description page to edit or delete the product. The edit button takes them to a form much like the add a product form - but already populated. The admin can then change any info or change the picture as required - then update the product. They can also click on the delete option and a security model will open to warn them that a deletion cannot be undone and they then have to click to slete again in order to successfully delete the product from the store.
 
 ### Further Testing
 
@@ -174,9 +222,9 @@ I used the following services to validate every page of the project to ensure th
 all pages on all devices.
 -   A large amount of testing of the database C.R.U.D functions was completed during development. After every change the site was tested to ensure no new issues or bugs were located.
 -   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues, they reported a success on all fronts.
--   The website was tested on [Lighthouse](https://developers.google.com/web/tools/lighthouse) and achieved a high score on all issues:
+-   The website was tested on [Lighthouse](https://developers.google.com/web/tools/lighthouse) and achieved a high score on performance and a good score on other issues:
 
-ADD LIGHTHOUSE SCREENSHOT
+<img src="https://res.cloudinary.com/passion4film/image/upload/v1632567249/Screenshots/lighthouse-1_pntxmo.png" style="margin: 0;">
 
     
     You can use the Lighthouse Tool on any webpage by right clicking on the site, then 'inspect', then the two arrow button '>>' and 'Lighthouse'. You can select to test the site 
@@ -276,8 +324,21 @@ At Heroku.com you can choose to 'Create a New App' - the name must be unique, in
 Since environment variables are within a hidden env.py file, Heroku won't be able to read those variables. Click on the 'Settings' tab for your app, and then click on 
 'Reveal Config Vars', where we can securely tell Heroku which variables are required. Must match the details in the env.py file you have to create in github.
 
+You will need to set up an AWS S3 Bucket for the images, a Stripe account for the payments and an email account for the emails to be sent from.
+
 Make sure not to include any "quotes" for the key, or the value.
 
+|**Key**|**Value**|
+|:-----|:-----|
+|AWS_ACCESS_KEY_ID|`access key`|
+|AWS_SECRET_ACCESS_KEY|`secret access key`|
+|DATABASE_URL|`postgres info`|
+|EMAIL_HOST_PASS|`taken from email provider`|
+|SECRET_KEY|`secret key`|
+|STRIPE_PUBLIC_KEY|`stripe public key from your console`|
+|STRIPE_SECRET_KEY|`stripe secret key from your console`|
+|STRIPE_WH_SECRET|`stripe webhook secret`|
+|USE_AWS|`True`|
 
 * Make sure all changes on GitHub have been added, commited and pushed to GitHub. 
 * We can now safely 'Enable Automatic Deployment', as everything should be available on our repository.
@@ -287,6 +348,12 @@ Make sure not to include any "quotes" for the key, or the value.
 
 ## Future maintainability
 
+The images used are stored in an AWS S3 bucket for easy maintainability, 
+
+There is code commenting for for important sections of the HTML pages, which make it easy for developers to view for future maintenence. It makes changing the code/updating the 
+details easier for other developers.
+
+There is also a level of code commenting in the CSS, Python & JavaScript/JQuery sections, to ensure if any bugs or errors do occur it will be simple to see what part of the page each section affects. This makes updating and changing the code easier for other developers.
 
 ## Credits
 
@@ -315,8 +382,7 @@ All the paintings 'on sale' are photos of my own paintings I have completed myse
 
 ## Acknowledgements
 
-I received inspiration for this project from the Boutique Ado mini-project as part of the Code Institute course, example websites, Slack message boards as well as 
-much appreciated help from my Mentor; Antonio Rodriguez.
+I received inspiration for this project from the Boutique Ado mini-project as part of the Code Institute course, [example websites](https://www.funpaintbynumbers.com/), Slack message boards as well as much appreciated help from my Mentor; Antonio Rodriguez.
 
 **DISCLAIMER: This project is for educational purposes only, no materials/files are intended for any commercial use**
 
