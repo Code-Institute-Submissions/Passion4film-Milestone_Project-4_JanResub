@@ -102,6 +102,10 @@
 
 <img src="https://res.cloudinary.com/passion4film/image/upload/v1632511162/Screenshots/database-2_edcmfl.png" style="margin: 0;">
 
+To deploy to Heroku I used the Postgres free package. Heroku Postgres is a managed SQL database service provided directly by Heroku. You can access a Heroku Postgres database from any language with a PostgreSQL driver, including all languages officially supported by Heroku. In addition to a variety of management commands available via the Heroku CLI, Heroku Postgres provides a web dashboard, the ability to share queries with dataclips, and several other helpful features. See more information on Postgres [here](https://devcenter.heroku.com/articles/heroku-postgresql)
+
+<img src="https://res.cloudinary.com/passion4film/image/upload/v1632592359/Screenshots/postgres_cwsoop.png" style="margin: 0;">
+
 ## Features
 
 -   Responsive on all device sizes. For example:
@@ -166,6 +170,7 @@ In this project I used:
 -   [AWS](https://aws.amazon.com/?nc2=h_lg) I used AWS S3 to store and display my product images.
 -   [Stripe](https://stripe.com/en-gb) Stripe payments are how the orders are taken and webhooks sent/received to take the payment and create the order on the datatbase.
 -   [Heroku](https://www.heroku.com/home) Heroku is where the site is deployed.
+-   [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql) Postgres through Heroku is the deployed datatbase.
 -   [Google Fonts:](https://fonts.google.com/) Google fonts were used to import the 'Nunito' font into the base.css file which is used on all pages throughout the project.
 -   [Font Awesome:](https://fontawesome.com/) Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 -   [GitHub:](https://github.com/) GitHub is used to store the projects code after being pushed from Git.
@@ -187,10 +192,10 @@ In this project I used:
 
 I used the following services to validate every page of the project to ensure there were no syntax errors:
 
--   [W3C Markup Validator](https://validator.w3.org/) This validator doesnt like the Jinja templating - but if you run the code from the page source you can check for any non-jinja errors.
+-   [W3C Markup Validator](https://validator.w3.org/) This validator doesnt like the Jinja templating - but if you run the code from the page source you can check for any non-jinja errors. There is one error located that I cannot fix - on the nav bar there is a duplicated ID between the large screen nav bar and the mobile nav bar - however as one of these is always hidden there is no issue with this error and it can be ignored.
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 -   [JSHint](https://jshint.com/)
--   [PEP8 Online Check](http://pep8online.com/)
+-   [PEP8 Online Check](http://pep8online.com/) - When I ran the Flake8 command alot of the errors were with the automated code or migrations - so I left them. I had a few line too long errors that I couldnt fix without the code breaking, after my final discussion with my mentor it was agreed to leave them as long as the code was working - as it's not always possible to be completely PEP8 compliant but it's important that the code functions as expected.
 
 <img style="border:0;width:88px;height:31px"
         src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
@@ -239,7 +244,7 @@ No bugs have been located at the time of Deployment.
 
 ## Deployment
 
-### GitHub Pages
+### GitHub 
 
 The repository for this project is stored on [GitHub](https://github.com/) and is deployed on [Heroku](https://www.heroku.com/).
 
