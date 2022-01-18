@@ -4,8 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category, ProductReview
-from .forms import ProductForm
+from .models import Product, Category
+from .forms import ProductForm, ReviewForm
 
 
 def all_products(request):
@@ -69,18 +69,35 @@ def product_detail(request, product_id):
         'product': product,
     }
 
-    # Add review
-
-    if request.method == 'POST' and request.user.is_authenticated:
-        rating = request.POST.get('rating', 3)
-        content = request.POST.get('content', '')
-
-        review = ProductReview.objects.create(product=product, user=request.user, rating=rating, content=content)
-
-        return redirect('products/product_detail.html', context)
-
-
     return render(request, 'products/product_detail.html', context)
+
+
+@login_required
+def add_review(request, product_id):
+    """
+    A view to allow the user to add a review to a product
+    """
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            form = ReviewForm(request.POST)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.product = product
+                review.user = request.user
+                review.save()
+                messages.success(request, 'Your review was successful')
+                return redirect(reverse('product_detail', args=[product.id]))
+            else:
+                messages.error(
+                    request, 'Failed to add your review')
+    context = {
+        'form': form
+    }
+
+    return render(request, context)
 
 
 @login_required

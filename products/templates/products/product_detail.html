@@ -132,15 +132,10 @@
                     <h3>Reviews</h3>
 
                     <div class="reviews-wrapper">
-                        {% for review in product.reviews.all %}
-                            <div class="notification space-below">
-                                <p>
-                                    <strong>Date: </strong>{{ review.date_added|date:"Y-m-d" }},
-                                    <strong>Rating: </strong>{{ review.rating }}
-                                </p>
-
-                                {{ review.content }}
-                            </div>
+                        {% for review in reviews %}
+                            by: {{ review.profile.user.username }}
+                            {{ review.review_text }}
+            
                         {% empty %}
                             <div class="notification space-below">
                                 No reviews yet...
@@ -148,15 +143,17 @@
                         {% endfor %}
                     </div>
 
+                    <!--Review Form -->
                     <div class="notification space-below">
                         {% if request.user.is_authenticated %}
-                            <form method="post" action=".">
-                                {% csrf_token %}
-
-                                <div class="field">
-                                    <label>Rating</label>
-
-                                    <div clas="control">
+                        <form method="POST" action="{% url 'add_review' product.id %}#reviews">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                    
+                            <div class="field">
+                                <label>Rating</label>
+                    
+                                    <div class="control">
                                         <div class="select">
                                             <select name="rating">
                                                 <option value="1">1</option>
@@ -167,27 +164,26 @@
                                             </select>
                                         </div>
                                     </div>
+                            </div>
+                    
+                            <div class="field">
+                                <label>Content</label>
+                    
+                                <div class="control">
+                                    <textarea class="textarea" name="content"></textarea>
                                 </div>
-
-                                <div class="field">
-                                    <label>Content</label>
-
-                                    <div class="control">
-                                        <textarea class="textarea" name="content"></textarea>
-                                    </div>
+                            </div>
+                    
+                            <div class="field">
+                                <div class="control">
+                                    <button class="btn btn-blue rounded-5 text-uppercase mt-5" type="submit">Submit Review</button>
                                 </div>
-
-                                <div class="field">
-                                    <div class="control">
-                                        <input type="submit" class="btn btn-blue rounded-5 text-uppercase mt-5" value="Submit Review">
-                                    </div>
-                                </div>
-                            </form>
-                        {% else %}
-                            <p>Please sign in to add review!</p>
-                        {% endif %}
+                            </div>
+                        </form>
+                            {% else %}
+                                <p>Please sign in to add review!</p>
+                            {% endif %}
                     </div>
-                </div>
                 </div>
             </div>
         </div>
