@@ -86,7 +86,7 @@ class StripeWH_Handler:
                     street_address1__iexact=shipping_details.address.line1,
                     street_address2__iexact=shipping_details.address.line2,
                     town_or_city__iexact=shipping_details.address.city,
-                    postcode__iexact=shipping_details.address.postal_code,               
+                    postcode__iexact=shipping_details.address.postal_code,
                     county__iexact=shipping_details.address.state,
                     country__iexact=shipping_details.address.country,
                     grand_total=grand_total,
