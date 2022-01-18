@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category
+from .models import Product, Category, ProductReview
 from .forms import ProductForm
 
 
@@ -68,6 +68,17 @@ def product_detail(request, product_id):
     context = {
         'product': product,
     }
+
+    # Add review
+
+    if request.method == 'POST' and request.user.is_authenticated:
+        rating = request.POST.get('rating', 3)
+        content = request.POST.get('content', '')
+
+        review = ProductReview.objects.create(product=product, user=request.user, rating=rating, content=content)
+
+        return redirect('products/product_detail.html', context)
+
 
     return render(request, 'products/product_detail.html', context)
 
