@@ -3,7 +3,9 @@ from django.contrib.auth.models import User
 
 
 class Category(models.Model):
-
+    """
+    Category Model
+    """
     class Meta:
         verbose_name_plural = 'Categories'
 
@@ -18,6 +20,9 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    """
+    Product Model
+    """
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
@@ -54,7 +59,6 @@ class ProductReview(models.Model):
                              null=True,
                              blank=True,
                              on_delete=models.CASCADE)
-    title = models.CharField(max_length=254)
     content = models.TextField()
     rating = models.IntegerField(choices=rating_selection, default=3)
     date_added = models.DateTimeField(auto_now_add=True)

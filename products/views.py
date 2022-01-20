@@ -64,9 +64,11 @@ def product_detail(request, product_id):
     """ A view to show individual painting product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    form = ReviewForm()
 
     context = {
         'product': product,
+        'form': form,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -77,7 +79,6 @@ def add_review(request, product_id):
     """
     A view to allow the user to add a review to a product
     """
-
     product = get_object_or_404(Product, pk=product_id)
 
     if request.user.is_authenticated:
@@ -165,6 +166,10 @@ def delete_product(request, product_id):
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
+    # Used to store the products reviews
+    reviews = product.reviews.all()
     product.delete()
-    messages.success(request, 'Product deleted!')
+    # Delete reviews after product is deleted
+    reviews.delete()
+    messages.success(request, 'Product deleted successfully')
     return redirect(reverse('products'))
