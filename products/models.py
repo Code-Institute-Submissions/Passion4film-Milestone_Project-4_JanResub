@@ -59,9 +59,9 @@ class ProductReview(models.Model):
                              null=True,
                              blank=True,
                              on_delete=models.CASCADE)
-    content = models.TextField()
+    content = models.TextField(default='Add your review here')
     rating = models.IntegerField(choices=rating_selection, default=3)
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.title
+        return self.content
