@@ -39,6 +39,7 @@ class ProductReview(models.Model):
     """
     Product Review Model
     """
+
     class Meta:
         ordering = ['-date_added']
 
@@ -59,7 +60,7 @@ class ProductReview(models.Model):
                              null=True,
                              blank=True,
                              on_delete=models.CASCADE)
-    content = models.TextField(default='Add your review here')
+    content = models.TextField()
     rating = models.IntegerField(choices=rating_selection, default=3)
     date_added = models.DateTimeField(auto_now_add=True)
 

@@ -79,6 +79,7 @@ def add_review(request, product_id):
     """
     A view to allow the user to add a review to a product
     """
+
     product = get_object_or_404(Product, pk=product_id)
 
     if request.user.is_authenticated:

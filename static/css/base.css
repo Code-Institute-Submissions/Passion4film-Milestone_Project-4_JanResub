@@ -181,6 +181,23 @@ input[name='q']::placeholder {
     font-size: 30px;
 }
 
+/* -------------------------------- Review Styles */
+
+.card {
+    background-color: #fff;
+}
+
+textarea.form-control {
+    height: 5rem;
+}
+
+.review-container {
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.5);
+    border-width: 3px;
+    border-color: rgb(224, 160, 210);
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
