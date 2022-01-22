@@ -37,7 +37,9 @@ class Product(models.Model):
 
 class ProductReview(models.Model):
     """
-    Product Review Model
+    Product Review Model. Code inspired from Slack thread publically shared 
+    (https://code-institute-room.slack.com/archives/C7HS3U3AP/p1633805391273000?thread_ts=1633805010.271700&cid=C7HS3U3AP)
+    and github repository link: https://github.com/Harry-Leepz/Nourish-and-Lift/tree/main/products
     """
 
     class Meta:

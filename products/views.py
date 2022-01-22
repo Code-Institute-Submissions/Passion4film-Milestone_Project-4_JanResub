@@ -78,6 +78,9 @@ def product_detail(request, product_id):
 def add_review(request, product_id):
     """
     A view to allow the user to add a review to a product
+    Code inspired from Slack thread publically shared
+    (https://code-institute-room.slack.com/archives/C7HS3U3AP/p1633805391273000?thread_ts=1633805010.271700&cid=C7HS3U3AP)
+    and github repository link: https://github.com/Harry-Leepz/Nourish-and-Lift/tree/main/products
     """
 
     product = get_object_or_404(Product, pk=product_id)
