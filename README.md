@@ -37,7 +37,7 @@
 3. The C.R.U.D functionality - site owners must be able to add, read, update and delete the products on the store.
 4. A search function to locate products by name/ category or description .
 5. The site must be user friendly and visually appealing.
-6. A user can register on the site but does not have to in order to make a purchase.
+6. A user can register on the site but does not have to be registered in order to make a purchase. They will have to provide address info however to have the goods shipped to them, but they can choose to have this stored and create an account or not.
 
 # UX
 
@@ -124,6 +124,7 @@ To deploy to Heroku I used the Postgres free package. Heroku Postgres is a manag
 
 ### Product Details Page
 -    This page shows a larger image of the product the user has chosen and a bit of a blurb about the product - I also added an image carousel to this page so the users can change the image to a picture of the 'kit' that comes with each painting - this matches the description. The users have the ability to choose a quantity and either add the item to their shopping bag or go back to the store.
+-   There is also a Product Review model added to this page - this means that the users can see the reviews from previous buyers, and if they are registered and logged in, they can leave a review of their own. The review form is then submitted and posted to the page so all users can read the review and clearing see the rating the product has received. Help for the review products model is credited at the end of this readme and also whithin the product_detail.html.
 
 ### Shopping Bag Page
 -    This page shows the user their shopping bag - if there is nothing there it informs them and gives them a link to go back to the store. If there are products in the bag it populates with the details of this - as well as giving the users the ability to update their quantity or to remove the item from their bag completely. if they have goods and want to purchase they have buttons at the bottom to either go to a secure checkout or to go back to the store.
@@ -139,6 +140,7 @@ To deploy to Heroku I used the Postgres free package. Heroku Postgres is a manag
 -   I would have liked to include my site logo on all the confirmation emails sent to the users, both when they register for the site and when they make a successful purchase. I think this would have elevated the emails and made them appear alot more professional, however I didn't have time on this project to figure that out.
 -   I would have also liked to add additional photos of each painting, such as a photo of it on a wall, that the would be triggered by the mouse hovering over the image. However this would have required alot more photos being taken and I didn't have the time to persue this.
 -   If this was a real site I would look to include an option for the user to checkout and pay using Paypal - as this is personally my favourite way to purchse items online, it is faster, more secure and Paypal provides a level of protection for both sellers and shoppers. In my opinion a good ecommerce site utilises Paypal, so I would add this in a real store.
+-   I have been advised by testers that a FAQ section would also be useful for first-time buyers etc to cover shipping times, costs and any other information that might commonly be asked for. I would therefore implement this had I the time for a real store.
 
 ## Error Handling
 
@@ -375,6 +377,11 @@ Online tutorials:
 
 * [For the image carousel on product details page - to show a pic of the kit that comes with the painting](https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-carousel.php)
 
+Help from Slack:
+
+* [The code to create the Product Reviews was inspired from a Slack thread, which was publically shared to help fellow students](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1633805391273000?thread_ts=1633805010.271700&cid=C7HS3U3AP)
+
+* [Link to the github repository, also publically shared to help other students](https://github.com/Harry-Leepz/Nourish-and-Lift/tree/main/products)
 
 ### Media
 
